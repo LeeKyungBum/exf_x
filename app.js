@@ -93,3 +93,4 @@ const CLOTHES = Object.freeze([
     },
   ]);
   
+  const clothes = doucument.querySelector("#clothes")

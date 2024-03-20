@@ -1,0 +1,24 @@
+div{
+    display: flex;
+}
+button{
+    color: white;
+    background-color: black;
+    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    font-weight: bold;
+    border:none;
+    transition:0.3s; /*서서히 바뀌게 끔*/
+    margin-left: 10px;
+}
+button:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.title{
+    justify-content: center;
+    text-decoration-line: underline;
+}
+.button{
+    justify-content: center;
+}
