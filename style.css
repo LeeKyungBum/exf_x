@@ -1,19 +1,20 @@
 div{
     display: flex;
 }
-button{
+.btn{
     color: white;
     background-color: black;
-    box-shadow: 0 4px 16px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     border-radius: 20px;
     font-weight: bold;
     border:none;
     transition:0.3s; /*서서히 바뀌게 끔*/
     margin-left: 10px;
 }
-button:hover{
+.btn:hover{
     background-color: white;
     cursor: pointer;
+    color:black;
 }
 .title{
     justify-content: center;
@@ -22,3 +23,73 @@ button:hover{
 .button{
     justify-content: center;
 }
+
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    width: 100vw;
+    height: 100vh;
+  
+    gap: 2rem;
+  }
+  
+.clothes-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+    padding-bottom: 30px;
+  
+    gap: 48px 32px;
+  }
+  
+  .clothes-card {
+    display: flex;
+    overflow: hidden;
+  
+    width: 34.375rem;
+    height: 12.5rem;
+  
+    border: 1px solid #eee;
+    border-radius: 10px;
+  
+    box-shadow:
+      0 3px 3px 0 rgba(0, 0, 0, 0.1),
+      0 5px 5px 0 rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  
+    gap: 3.4375rem;
+  
+    transition: margin 0.6s;
+  }
+  
+  .clothes-card:hover {
+    margin-bottom: 7px;
+    margin-top: -7px;
+  }
+  
+  .img-wrap {
+    width: 30%;
+    height: 100%;
+  }
+  
+  .clothes-image {
+    width: 12.5rem;
+    height: 12.5rem;
+  
+    object-fit: cover;
+  }
+  
+  .clothes-info {
+    display: flex;
+    flex-direction: column;
+  
+    width: 70%;
+  }
+  
+  .clothes-description {
+    color: #585858;
+  }
+  
