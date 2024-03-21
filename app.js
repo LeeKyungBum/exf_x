@@ -1,5 +1,3 @@
-// app.js
-
 const CLOTHES = Object.freeze([
     {
       id: 1,
@@ -92,64 +90,3 @@ const CLOTHES = Object.freeze([
         'https://i.pinimg.com/564x/bb/09/ab/bb09ab14445fe95b7eed2164bf369f29.jpg',
     },
   ]);
-const buttonSection = document.querySelector('.buttons-wrap');
-
-const createCategoryArray = () => {
-  const category = ['ALL'];
-
-  CLOTHES.forEach((item) => {
-    if (!category.includes(item.category)) {
-      category.push(item.category);
-    }
-  });
-
-  return category;
-};
-
-const filterClothesItem = (category) => {
-  if (category === 'ALL') return displayClothes(CLOTHES);
-
-  const clothesCategory = CLOTHES.filter((item) => item.category === category);
-
-  displayClothes(clothesCategory);
-};
-
-const displayButtons = () => {
-  const category = createCategoryArray();
-  const buttons = category.map((category) => {
-    return `<button class="filter-button">${category}</button>`;
-  });
-
-  buttonSection.innerHTML = buttons.join('\n');
-
-  const filterButtons = document.querySelectorAll('.filter-button');
-
-  filterButtons.forEach((button) => {
-    button.addEventListener('click', (e) => {
-      const category = e.target.innerHTML;
-      filterClothesItem(category);
-    });
-  });
-};
-
-const clothesSection = document.querySelector('.clothes-container');
-
-const displayClothes = (clothesCard) => {
-  let clothes = clothesCard.map((item) => {
-    return `<div class="clothes-card">
-      <div class="img-wrap">
-        <img
-          class="clothes-image"
-          src=${item.image}
-        />
-      </div>
-      <div class="clothes-info">
-        <h2 class="clothes-name">${item.name}</h2>
-        <span>${item.price}</span>
-        <span class="clothes-description">${item.description}</span>
-      </div>
-    </div>`;
-  });
-
-  clothesSection.innerHTML = clothes.join('\n');
-};
